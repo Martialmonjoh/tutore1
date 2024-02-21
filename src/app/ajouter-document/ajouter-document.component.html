@@ -1,0 +1,100 @@
+<app-header></app-header>
+<div style="display: flex; padding-top: 50px;">
+    <app-dashboard></app-dashboard>
+    
+    <style>
+        body {
+          font-family: 'Helvetica Neue', sans-serif;
+          background-color: #f8f8f8;
+          color: #333;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+        }
+      
+        .form-container {
+          max-width: 400px;
+          width: 100%;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          margin-top: 7%;
+        }
+      
+        .form-container label {
+          display: block;
+          margin-bottom: 8px;
+          font-size: 14px;
+          font-weight: bold;
+          color: #555;
+        }
+      
+        .form-container input,
+        .form-container select,
+        .form-container button,
+        .form-container file_input {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 16px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+      
+        .form-container button {
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+      
+        .form-container button:hover {
+          background-color: #2980b9;
+        }
+
+        button{
+            margin: 0 5px;
+        }
+      </style>
+    <form class="form-container">
+        <div class="mb-5">
+            <label for="auteur" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Auteur</label>
+            <input type="text" id="auteur" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nom de l'auteur" required>
+        </div>
+        <div class="mb-5">
+        <label for="categorie" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">categorie</label>
+        <input type="text" id="categorie" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required placeholder="nom de la categorie">
+        </div>
+        <div class="mb-5">
+            <label for="status" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label>
+            <select id="status" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        
+            <option>disponibles</option>
+            <option>non disponible</option>
+            </select> 
+        </div>
+        <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Fichier</label>
+            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file">
+        </div>
+        <div class="mb-5">
+            <label for="nom" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nom</label>
+            <input type="text" id="nom" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Nom du document" required>
+        </div>
+        <div class="mb-5">
+          <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+          <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Description..."></textarea>
+        </div>
+        <div style="display: flex;">
+            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Ajouter</button>
+            <button type="button" class="py-2 px-4 flex justify-center items-center  bg-red-600 hover:bg-red-700 focus:ring-red-500 focus:ring-offset-red-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                Cancel
+            </button>
+        </div>
+    </form>
+</div>
